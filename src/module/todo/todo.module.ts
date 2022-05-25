@@ -6,10 +6,8 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { TodoRepository } from './todo.repository';
 
 @Module({
-  imports: [
-    TypeOrmModule.forFeature([TodoRepository]),
-  ],
+  imports: [TypeOrmModule.forFeature([TodoRepository])],
   controllers: [TodoController],
-  providers: [TodoService]
+  providers: [TodoService],
 })
 export class TodoModule {}
